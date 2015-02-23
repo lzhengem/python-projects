@@ -1,0 +1,129 @@
+Script started on Sat 14 Feb 2015 03:45:12 PM PST
+[lzheng22@hills palindromelab]$ cd
+[lzheng22@hills ~]$ . commands
+[lzheng22@hills ~]$ cd PYLABS/
+[lzheng22@hills PYLABS]$ tree LAB03/
+LAB03/
+|-- palindromelab
+|   |-- __init__.py
+|   |-- lab3_script
+|   |-- __pycache__
+|   |   |-- __init__.cpython-34.pyc
+|   |   |-- sentences.cpython-34.pyc
+|   |   `-- stringy.cpython-34.pyc
+|   |-- sentences.py
+|   |-- stringy.py
+|   |-- testrunner
+|   `-- tests
+|       |-- __init__.py
+|       |-- testA.txt
+|       |-- testB.txt
+|       `-- testC.txt
+`-- README.txt
+
+3 directories, 13 files
+[lzheng22@hills PYLABS]$ pydoc3 pa         c  d LAB03/
+[lzheng22@hills LAB03]$ pydoc3 palindromelab/
+no Python documentation found for 'palindromelab/'
+
+[lzheng22@hills LAB03]$ cd palindromelab/
+[lzheng22@hills palindromelab]$ ls-l   -l
+total 24
+-rw------- 1 lzheng22 b20143  964 Feb 10 19:39 __init__.py
+-rw------- 1 lzheng22 b20143    0 Feb 14 15:45 lab3_script
+drwx------ 2 lzheng22 b20143 4096 Feb 14 15:34 __pycache__
+-rw------- 1 lzheng22 b20143 1507 Feb 14 15:33 sentences.py
+-rw------- 1 lzheng22 b20143  507 Feb 13 12:59 stringy.py
+-rwx------ 1 lzheng22 b20143  149 Feb 10 19:39 testrunner
+drwx------ 2 lzheng22 b20143 4096 Feb 14 14:31 tests
+[lzheng22@hills palindromelab]$ pydoc3 stringy
+Help on module stringy:
+
+NAME
+    stringy - In this module any string that spells exactly the same backwards is considered a palindrome.
+
+DESCRIPTION
+    Examples:
+    
+    >>> is_palindrome("racecar"), is_palindrome("race car")
+    (True, False)
+    
+    >>> is_palindrome("?! 101 !?")
+    True
+    
+    >>> is_palindrome("now I won")
+    True
+
+FUNCTIONS
+    is_palindrome(s)
+        Returns True if the string s is the same read backwards.
+
+FILE
+    /students/lzheng22/PYLABS/LAB03/palindromelab/stringy.py
+
+
+[lzheng22@hills palindromelab]$ pydoc3 sentences.py     
+Help on module sentences:
+
+NAME
+    sentences
+
+DESCRIPTION
+    In this module allow sentences to be palindromes.  
+    We ignore spaces, punctuation marks, etc. Also, not case-sensitive.
+    
+    We define three functions:  stripper, normalize, and is_palindrome.
+    
+    >>> stripper("Madam, I'm Adam!")
+    'MadamImAdam'
+    
+    >>> normalize("Madam, I'm Adam!")
+    'MADAMIMADAM'
+    >>> normalize("Catch22")
+    'CATCH'
+    
+    >>> is_palindrome('Bob')
+    True
+    >>> is_palindrome("race car")
+    True
+    >>> is_palindrome("A man, a plan, a canal, Panama!")
+    True
+
+FUNCTIONS
+    is_palindrome(sentence)
+        Returns True only if the sentence spells the same backwards,
+        when we ignore spaces, upper or lower case, and punctuation marks.
+    
+    normalize(s)
+        Returns the string s as a string consisting only of upper-case letters.
+    
+    stripper(s)
+        Removes spaces and non-letters.
+
+FILE
+    /students/lzheng22/PYLABS/LAB03/palindromelab/sentences.py
+
+
+[lzheng22@hills palindromelab]$ ./testrunner 
+Test the file tests/testA.txt  [Yn] 
+Testing:  tests/testA.txt
+Tested 12 statements in tests/testA.txt. All OK.
+
+Test the file tests/testB.txt  [Yn] 
+Testing:  tests/testB.txt
+Tested 14 statements in tests/testB.txt. All OK.
+
+Test the file tests/testC.txt  [Yn] 
+Testing:  tests/testC.txt
+Tested 11 statements in tests/testC.txt. All OK.
+
+[lzheng22@hills palindromelab]$ finger -pms `whoami`
+Login     Name         Tty      Idle  Login Time   Office     Office Phone
+lzheng22  Lena Zheng   pts/5          Feb 14 15:45 lzheng22@m Haha nahhhh
+lzheng22  Lena Zheng   pts/32         Feb 14 13:59 (104.179.214.81)
+[lzheng22@hills palindromelab]$ date
+Sat Feb 14 15:46:32 PST 2015
+[lzheng22@hills palindromelab]$ exit
+exit
+
+Script done on Sat 14 Feb 2015 03:46:34 PM PST
